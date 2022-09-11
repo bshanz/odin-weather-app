@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="app.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Weather App</div>
+      <div class="main">
+        <div class="main-top">
+          <form
+            onsubmit="return false"
+            action="#"
+            method="POST"
+            id="search-form"
+          >
+            <input
+              type="text"
+              placeholder="Enter a city name"
+              id="search-dom"
+              name="city"
+              minlength="1"
+              maxlength="50"
+              required
+            />
+          </form>
+          <button
+            form="search-form"
+            id="search-btn"
+            type="submit"
+            class="submit"
+          >
+            Search
+          </button>
+        </div>
+        <div id="main-bottom" class="main-bottom">
+          <div id="city-name" class="city-name">Mount Olympus</div>
+          <img src="icons/sun.png" alt="sun" />
+          <div id="weather-name" class="weather-name">Sunny</div>
+          <div id="temp" class="temp">73°F</div>
+          <button id="celsius-btn" class="celsius">Change to celsius</button>
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>
