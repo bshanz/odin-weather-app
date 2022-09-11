@@ -9,6 +9,7 @@ const changeToCelsiusBtn = document.getElementById("celsius-btn");
 
 const userInput = document.getElementById("search-dom");
 const searchBtn = document.getElementById("search-btn");
+const form = document.getElementById("search-form");
 
 let weatherDisplay = "fahrenheit";
 
@@ -175,7 +176,7 @@ changeToCelsiusBtn.addEventListener("click", function (e) {
   console.log(cityName.innerText);
 });
 
-searchBtn.addEventListener("click", async function (e) {
+form.addEventListener("submit", async function (e) {
   try {
     // get API response based on user input city
     const response = await fetch(
